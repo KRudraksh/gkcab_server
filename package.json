@@ -1,0 +1,31 @@
+{
+  "name": "gk-cab-server",
+  "version": "1.0.0",
+  "description": "GK Cab Backend Server",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "mkdir -p dist && cp -r src/* dist/ && cp package.json dist/ && cp package-lock.json dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "azure-deploy": "npm run build && echo 'Ready for deployment to Azure Web App'"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "mongoose": "^8.10.2",
+    "msg91": "^2.2.4",
+    "node-cron": "^3.0.3",
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 
